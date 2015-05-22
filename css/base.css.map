@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "base.css",
+	"sources": [
+		"../../scss/base.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "AAAA,KAAO,WAAY,SAEnB,UAAY,WAAW,MAIvB,yBAAyB,SACrB,OAAO,QACP,QAAQ",
+	"names": []
+}
