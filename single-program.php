@@ -84,14 +84,6 @@ get_header(); ?>
                                     <p class="rs-program-contact"><?php echo $contact ?></p>
                                 <?php endif; ?>
 
-                                <?php // Information Message ?>
-                                <?php if ( $message ) : ?>
-                                    <p class="rs-program-message-link">
-                                        <a href="#"><?php _e( 'View Visitor Information' ); ?> <span>+</span></a>
-                                    </p>
-                                    <div class="rs-program-message" style="display:none;"><?php echo wpautop( $message ); ?></div>
-                                <?php endif; ?>
-
                                 <?php // Custom fields ?>
                                 <?php if ( $custom ) : ?>
                                     <div class="rs-program-custom-wrap"><?php echo $custom; ?></div>
