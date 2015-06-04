@@ -1,12 +1,25 @@
-body { background: #EFEFEF; }
+body {
+  background: #EFEFEF;
+}
+section.container {
+  margin: 20px 0;
+}
 
-.bg-white { background:#FFF; }
+.rs-container {
+  padding:20px 0;
+}
+
+.bg-white {
+  background: #FFF;
+}
 
 .rs-program-registration {
-
   fieldset {
-    margin:0.75rem;
-    padding:0.75rem;
+    margin: 0.75rem;
+    padding: 0.75rem;
   }
-
 }
+
+h1 { font-size:210%; }
+h2 { font-size: 150%; }
+h3 { font-size:110%; }

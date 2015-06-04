@@ -26,7 +26,7 @@ get_header();
                         <?php rs_archive_edit_link(); ?>
                         <?php rs_archive_page_content(); ?>
                     <?php else : ?>
-                        <h2 style=""><?php _e( 'Programs', 'programs' ); ?></h2>
+                        <h1 style=""><?php _e( 'Programs', 'programs' ); ?></h1>
                     <?php endif; ?>
                     <?php if(get_theme_mod( 'theme_link_homepage' )) { $site_url = esc_url(get_theme_mod( 'theme_link_homepage' )); ?>
                         <a href="<?php echo $site_url; ?>" style="color:#757575;">&#171; Go back</a>

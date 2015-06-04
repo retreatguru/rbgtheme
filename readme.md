@@ -3,7 +3,7 @@ We're using foundationpress and a child theme to act as the base theme for all c
 
 ## Installation
 
-Git clone foundationpress and this repository to your theme folder
+Clone foundationpress and this repository into your theme folder
 
     git clone https://github.com/dwenaus/rbgtheme.git rbg-child
     git clone git@github.com:olefredrik/FoundationPress.git foundationpress
