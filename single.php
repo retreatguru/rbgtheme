@@ -33,5 +33,4 @@
 
 	<?php do_action( 'foundationPress_after_content' ); ?>
 
-	<?php get_sidebar(); ?>
 <?php get_footer(); ?>
