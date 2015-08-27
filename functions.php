@@ -159,6 +159,13 @@ function theme_customizer( $wp_customize ) {
         'settings'       => 'theme_body_size'
     ) ) );
 
+    $wp_customize->add_setting( 'theme_bg' );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_bg', array(
+        'label'    => __( 'Background', 'themeslug' ),
+        'section'  => 'theme_styles_section',
+        'settings' => 'theme_bg',
+    ) ) );
+
     $wp_customize->add_setting( 'theme_link_homepage' );
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_link_homepage', array(
         'label'          => __( 'Site Link', 'theme_link_homepage' ),

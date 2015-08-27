@@ -80,8 +80,23 @@
                 body, p, ul, li, .rs-register-link a { font-size: <?php echo $body_size; ?>px; }
             </style>
         <?php endif; ?>
-	</head>
-	<body <?php body_class(); ?> style="<?php if ( get_theme_mod( 'theme_background_color' ) ) { echo "background: ".get_theme_mod( 'theme_background_color' ); } ?>">
+
+        <?php $body_bg = get_theme_mod( 'theme_bg' ); ?>
+        <?php if($body_bg) : ?>
+            <style>
+                body { background: url('<?php echo $body_bg; ?>'); }
+            </style>
+        <?php endif; ?>
+
+        <?php $body_color = get_theme_mod( 'theme_background_color' ); ?>
+        <?php if($body_color) : ?>
+            <style>
+                body { background-color: <?php echo $body_color; ?> }
+            </style>
+        <?php endif; ?>
+
+    </head>
+	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationPress_after_body' ); ?>
 
 	
