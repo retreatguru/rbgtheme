@@ -28,6 +28,58 @@
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
 		
 		<?php wp_head(); ?>
+
+        <?php
+        $headline_font = get_theme_mod( 'theme_headline_font' );
+        $headline_size = get_theme_mod( 'theme_headline_size' );
+        $body_font = get_theme_mod( 'theme_body_font' );
+        $body_size = get_theme_mod( 'theme_body_size' );
+
+        if ( $headline_font || $body_font ) : ?>
+            <link href='https://fonts.googleapis.com/css?family=<?php if($headline_font) echo get_theme_mod( 'theme_headline_font' ).'|'; ?><?php echo get_theme_mod( 'theme_body_font' ); ?>' rel='stylesheet' type='text/css'>
+            <?php
+            $font_family['Open+Sans'] = 'Open Sans';
+            $font_family['Open+Sans+Condensed:300'] = 'Opens Sans Condensed';
+            $font_family['Lato'] = 'Lato';
+            $font_family['Oswald'] = 'Oswald';
+            $font_family['Source+Sans+Pro'] = 'Source Sans Pro';
+            $font_family['Fjalla+One'] = 'Fjalla One';
+            $font_family['Abel'] = 'Abel';
+            $font_family['Francois+One'] = 'Francois One';
+            $font_family['Slabo+27px'] = 'Slabo';
+            $font_family['Arvo'] = 'Arvo';
+            $font_family['Playfair+Display'] = 'Playfair Display';
+            $font_family['Bree+Serif'] = 'Bree Serif';
+            $font_family['Rokkitt'] = 'Rokkitt';
+            $font_family['EB+Garamond'] = 'EB Garamond';
+            $font_family['Josefin+Slab'] = 'Josefin Slab';
+            $font_family['Cinzel'] = 'Cinzel';
+            ?>
+
+            <style>
+                <?php if($body_font) : ?>
+                    body { font-family: '<?php echo $font_family[$body_font]; ?>', Sans-Serif; }
+                <?php endif; ?>
+
+                <?php if($headline_font) : ?>
+                    h1,h2,h3 { font-family: '<?php echo $font_family[$headline_font]; ?>', Sans-Serif; }
+                <?php endif; ?>
+            </style>
+        <?php endif; ?>
+
+        <?php if($headline_size) : ?>
+            <style>
+                h1 { font-size: <?php echo $headline_size; ?>px; }
+                h2 { font-size: <?php echo $headline_size*.8; ?>px; }
+                h3 { font-size: <?php echo $headline_size*.6; ?>px; }
+            </style>
+        <?php endif; ?>
+
+        <?php if($body_size) : ?>
+            <style>
+                body, p, ul, li, .rs-register-link a { font-size: <?php echo $body_size; ?>px; }
+            </style>
+        <?php endif; ?>
 	</head>
 	<body <?php body_class(); ?> style="<?php if ( get_theme_mod( 'theme_background_color' ) ) { echo "background: ".get_theme_mod( 'theme_background_color' ); } ?>">
 	<?php do_action( 'foundationPress_after_body' ); ?>
