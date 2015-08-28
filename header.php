@@ -109,7 +109,6 @@
 <section class="container" role="document">
 	<?php do_action( 'foundationPress_after_header' ); ?>
 
-
     <?php
     // Allow different headers for various program categories
     if (function_exists('z_taxonomy_image_url')) {
@@ -126,12 +125,13 @@
     ?>
 
     <?php if ( get_theme_mod( 'theme_logo' ) ) : ?>
-        <?php if(get_theme_mod( 'theme_link_homepage' )) { $site_url = esc_url(get_theme_mod( 'theme_link_homepage' )); } else { $site_url = esc_url( home_url( '/' ) ); } ?>
+        <?php if(get_theme_mod( 'theme_link_homepage' )) { $site_url = esc_url(get_theme_mod( 'theme_link_homepage' )); } else { $site_url = esc_url( home_url( '/programs' ) ); } ?>
         <div class='site-logo small-12 columns text-center' style="<?php if ( get_theme_mod( 'theme_logo_top_spacing' ) ) { echo "margin-top:".get_theme_mod( 'theme_logo_top_spacing' )."px;"; } ?>   <?php if ( get_theme_mod( 'theme_logo_bottom_spacing' ) ) { echo "margin-bottom:".get_theme_mod( 'theme_logo_bottom_spacing' )."px;"; } ?>">
+            <a href="<?php echo $site_url; ?>">
             <img src='<?php echo $header_image; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+            </a>
         </div>
     <?php endif; ?>
-
 
     <div class="row">
         <div class="small-12 large-12 columns bg-white pad-30" role="main" style="<?php if ( get_theme_mod( 'theme_highlight_color' ) ) { echo "border-top: 3px solid ".get_theme_mod( 'theme_highlight_color' ); } ?>">
