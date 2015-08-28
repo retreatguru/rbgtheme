@@ -114,7 +114,8 @@
     if (function_exists('z_taxonomy_image_url')) {
         $header_image = z_taxonomy_image_url();
 
-        foreach (get_the_terms(get_the_ID(), 'program_category') as $cat) {
+        $cats = get_the_terms(get_the_ID(), 'program_category');
+        foreach ((array)$cats as $cat) {
             $header_image = z_taxonomy_image_url($cat->term_id);
         }
     }
