@@ -136,7 +136,7 @@ function theme_customizer( $wp_customize ) {
         'choices'       => array(
             'Open+Sans' => 'Open Sans',
             'Open+Sans+Condensed:300' => 'Open Sans Condensed',
-            'Lato' => 'Lato',
+            'Lato:300' => 'Lato',
             'Oswald' => 'Oswald',
             'Source+Sans+Pro' => 'Source Sans Pro',
             'Fjalla+One' => 'Fjalla One',

@@ -40,7 +40,7 @@
             <?php
             $font_family['Open+Sans'] = 'Open Sans';
             $font_family['Open+Sans+Condensed:300'] = 'Opens Sans Condensed';
-            $font_family['Lato'] = 'Lato';
+            $font_family['Lato:300'] = 'Lato';
             $font_family['Oswald'] = 'Oswald';
             $font_family['Source+Sans+Pro'] = 'Source Sans Pro';
             $font_family['Fjalla+One'] = 'Fjalla One';
