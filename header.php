@@ -95,6 +95,11 @@
             </style>
         <?php endif; ?>
 
+        <?php $custom_header = get_theme_mod( 'theme_custom_header' ); ?>
+        <?php if($custom_header) : ?>
+            <?php echo $custom_header; ?>
+        <?php endif; ?>
+
     </head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationPress_after_body' ); ?>

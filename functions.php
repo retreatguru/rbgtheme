@@ -82,14 +82,14 @@ function theme_customizer( $wp_customize ) {
 
 
     $wp_customize->add_setting( 'theme_background_color' );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_background_color', array(
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_background_color', array(
         'label'          => __( 'Background Color', 'theme_background_color' ),
         'section'        => 'theme_styles_section',
         'settings'       => 'theme_background_color'
     ) ) );
 
     $wp_customize->add_setting( 'theme_highlight_color' );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_highlight_color', array(
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_highlight_color', array(
         'label'          => __( 'Highlight Color', 'theme_highlight_color' ),
         'section'        => 'theme_styles_section',
         'settings'       => 'theme_highlight_color'
@@ -166,11 +166,19 @@ function theme_customizer( $wp_customize ) {
         'settings' => 'theme_bg',
     ) ) );
 
+    $wp_customize->add_setting( 'theme_custom_header' );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_custom_header', array(
+        'label'    => __( 'Custom Header (CSS/JS)', 'theme_custom_header' ),
+        'section'  => 'theme_styles_section',
+        'settings' => 'theme_custom_header',
+        'type'     => 'textarea',
+    ) ) );
+
     $wp_customize->add_setting( 'theme_link_homepage' );
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'theme_link_homepage', array(
         'label'          => __( 'Site Link', 'theme_link_homepage' ),
         'section'        => 'theme_links_section',
-        'settings'       => 'theme_link_homepage'
+        'settings'       => 'theme_link_homepage',
     ) ) );
 
 
