@@ -132,10 +132,12 @@
 
     <?php if ( get_theme_mod( 'theme_logo' ) ) : ?>
         <?php if(get_theme_mod( 'theme_link_homepage' )) { $site_url = esc_url(get_theme_mod( 'theme_link_homepage' )); } else { $site_url = esc_url( home_url( '/programs' ) ); } ?>
+        <div class="row">
         <div class='site-logo small-12 columns text-center' style="<?php if ( get_theme_mod( 'theme_logo_top_spacing' ) ) { echo "margin-top:".get_theme_mod( 'theme_logo_top_spacing' )."px;"; } ?>   <?php if ( get_theme_mod( 'theme_logo_bottom_spacing' ) ) { echo "margin-bottom:".get_theme_mod( 'theme_logo_bottom_spacing' )."px;"; } ?>">
             <a href="<?php echo $site_url; ?>">
             <img src='<?php echo $header_image; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
             </a>
+        </div>
         </div>
     <?php endif; ?>
 
