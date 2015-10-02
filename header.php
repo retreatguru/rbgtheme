@@ -26,10 +26,13 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-		
+		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
 		<?php wp_head(); ?>
 
         <?php
+
+        wp_enqueue_style( 'RBG Customizations', get_stylesheet_directory_uri() . '/css/customizations.css' );
+
         $headline_font = get_theme_mod( 'theme_headline_font' );
         $headline_size = get_theme_mod( 'theme_headline_size' );
         $body_font = get_theme_mod( 'theme_body_font' );
