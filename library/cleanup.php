@@ -75,10 +75,10 @@ function foundationpress_cleanup_head() {
 	remove_action( 'wp_head', 'wp_generator' );
 
 	// Remove WP version from css
-	add_filter( 'style_loader_src', 'foundationpress_remove_wp_ver_css_js', 9999 );
+//	add_filter( 'style_loader_src', 'foundationpress_remove_wp_ver_css_js', 9999 );
 
 	// Remove WP version from scripts
-	add_filter( 'script_loader_src', 'foundationpress_remove_wp_ver_css_js', 9999 );
+//	add_filter( 'script_loader_src', 'foundationpress_remove_wp_ver_css_js', 9999 );
 
 	// Prevent unneccecary info from being displayed
 	add_filter( 'login_errors',create_function( '$a', 'return null;' ) );
@@ -91,14 +91,15 @@ if ( ! function_exists( 'foundationpress_remove_rss_version' ) ) :
 function foundationpress_remove_rss_version() { return ''; }
 endif;
 
-if ( ! function_exists( 'foundationpress_remove_wp_ver_css_js' ) ) :
+// NEVER DO THIS! - it totally destroys the versioning in the app.
+/*if ( ! function_exists( 'foundationpress_remove_wp_ver_css_js' ) ) :
 // remove WP version from scripts
 function foundationpress_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) ) {
 		$src = remove_query_arg( 'ver', $src ); }
 	return $src;
 }
-endif;
+endif;*/
 
 // remove injected CSS for recent comments widget
 if ( ! function_exists( 'foundationpress_remove_wp_widget_recent_comments_style' ) ) :
