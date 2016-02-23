@@ -118,6 +118,8 @@ function theme_customizer( $wp_customize ) {
             'EB+Garamond' => 'EB Garamond',
             'Josefin+Slab' => 'Josefin Slab',
             'Cinzel' => 'Cinzel',
+            'Roboto' => 'Roboto',
+            'Valera+Round' => 'Valera Round',
         ) ) ) );
 
     $wp_customize->add_setting( 'theme_headline_size' );
@@ -125,6 +127,13 @@ function theme_customizer( $wp_customize ) {
         'label'          => __( 'Headline Size', 'theme_headline_size' ),
         'section'        => 'theme_styles_section',
         'settings'       => 'theme_headline_size'
+    ) ) );
+
+    $wp_customize->add_setting( 'theme_headline_color' );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_headline_color', array(
+        'label'          => __( 'Header Color', 'theme_highlight_color' ),
+        'section'        => 'theme_styles_section',
+        'settings'       => 'theme_headline_color'
     ) ) );
 
     $wp_customize->add_setting( 'theme_body_font' );
@@ -150,6 +159,8 @@ function theme_customizer( $wp_customize ) {
             'EB+Garamond' => 'EB Garamond',
             'Josefin+Slab' => 'Josefin Slab',
             'Cinzel' => 'Cinzel',
+            'Roboto' => 'Roboto',
+            'Valera+Round' => 'Valera Round',
         ) ) ) );
 
     $wp_customize->add_setting( 'theme_body_size' );

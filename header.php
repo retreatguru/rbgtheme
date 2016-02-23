@@ -35,12 +35,15 @@
 
         $headline_font = get_theme_mod( 'theme_headline_font' );
         $headline_size = get_theme_mod( 'theme_headline_size' );
+        $headline_color = get_theme_mod( 'theme_headline_color' );
         $body_font = get_theme_mod( 'theme_body_font' );
         $body_size = get_theme_mod( 'theme_body_size' );
 
         if ( $headline_font || $body_font ) : ?>
             <link href='https://fonts.googleapis.com/css?family=<?php if($headline_font) echo get_theme_mod( 'theme_headline_font' ).'|'; ?><?php echo get_theme_mod( 'theme_body_font' ); ?>' rel='stylesheet' type='text/css'>
             <?php
+            $font_family['Roboto'] = 'Roboto';
+            $font_family['Valera+Round'] = 'Valera Round';
             $font_family['Open+Sans'] = 'Open Sans';
             $font_family['Open+Sans+Condensed:300'] = 'Opens Sans Condensed';
             $font_family['Lato:300'] = 'Lato';
@@ -75,6 +78,14 @@
                 h1 { font-size: <?php echo $headline_size; ?>px; }
                 h2 { font-size: <?php echo $headline_size*.8; ?>px; }
                 h3 { font-size: <?php echo $headline_size*.6; ?>px; }
+            </style>
+        <?php endif; ?>
+
+        <?php if($headline_color) : ?>
+            <style>
+                h1,h2,h3,.headline-color { color: <?php echo $headline_color; ?>; }
+                .headline-darker { color: <?php echo $headline_color; ?>;}
+                .headline-darker a:hover  { color: <?php echo $headline_color; ?>;}
             </style>
         <?php endif; ?>
 
@@ -130,6 +141,8 @@
 
     if (empty($header_image)) {
         $header_image = esc_url(get_theme_mod('theme_logo'));
+        // Force https. Temporary workaround until we understand why files are being saved with https://
+        $header_image = str_replace( 'http://', 'https://', $header_image );
     }
     ?>
 
